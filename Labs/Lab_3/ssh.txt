@@ -1,0 +1,17 @@
+server
+ssh brendons@pc1.geni.it.cornell.edu -p 26810
+
+c1
+ssh brendons@pc1.geni.it.cornell.edu -p 26811
+
+c2
+ssh brendons@pc1.geni.it.cornell.edu -p 26812
+
+c3
+ssh brendons@pc1.geni.it.cornell.edu -p 26813
+
+c4
+sh brendons@pc1.geni.it.cornell.edu -p 26814
+
+c5
+ssh brendons@pc1.geni.it.cornell.edu -p 26815

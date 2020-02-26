@@ -1,0 +1,22 @@
+#!/bin/bash
+set -e
+
+SEND () {
+    printf "\nSender: Creating UDP Data Gram\n"
+    python UDP_Sender.py tdpack5.bin 192.168.0.1 124.26.12.24 80 22 output
+
+}
+
+RECEIVE () {
+    printf "\nReceiver: Getting UDP Data Gram\n"
+}
+
+if [ $1 = "send" ];
+then
+    SEND
+    fi
+
+if [ $1 = "get" ];
+then
+    RECEIVE
+    fi
