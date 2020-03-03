@@ -36,6 +36,15 @@ def main(keyFile):
 
         messageList.append(save)
 
+        x = len(messageList)
+        messageFile = ""
+
+        for message in messageList:
+            messageFile = ("{})\n{}\n".format(x, message)) + messageFile
+            x -= 1
+
+        print(messageFile)
+
         encoded = DES(keySet=key, data=bytes(str(messageList), "utf-8"))
 
         sock.sendto(encoded, (receiverIPAddr, receiverPort))
