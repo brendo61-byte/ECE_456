@@ -1,10 +1,27 @@
 import socket
 import struct
 import os
+import time
 
 PACKET_SIZE = 1024
 TIME_OUT = 5
 SUCCESS = b'File Has Been Transferred'
+
+
+def timeit(method):
+    def timed(*args, **kw):
+        ts = time.time()
+        result = method(*args, **kw)
+        te = time.time()
+        if 'log_time' in kw:
+            name = kw.get('log_name', method.__name__.upper())
+            kw['log_time'][name] = int((te - ts) * 1000)
+        else:
+            print('%r  %2.2f ms' % \
+                  (method.__name__, (te - ts) * 1000))
+        return result
+
+    return timed
 
 
 def getPayload(fileName):
@@ -72,7 +89,8 @@ def main():
 
             payload = header + payload
 
-            sock.sendall(payload)
+            send(sock=sock, payload=payload)
+            # sock.sendall(payload)
             data = sock.recv(PACKET_SIZE)
 
         print("\nStatus:")
@@ -84,6 +102,11 @@ def main():
 
     except Exception as e:
         print(f"\n{e} error has broken things.")
+
+
+@timeit
+def send(sock, payload):
+    sock.sendall(payload)
 
 
 if __name__ == '__main__':
