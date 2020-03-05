@@ -1,0 +1,398 @@
+Crash Course Software Development for Engineers
+
+Course Description
+	This is a self paced course designed to give students the tools needed to use Python to solve engineering problems. It will focus on data organization and IoT applications rather than analysis. Giving students the skill set to design software to solve problems of variable scale, collect data from sensors, and organize code such that it is scalable, maintainable, and readable for future work.
+
+Course Organization
+	The course is designed to be completed in six weeks; plan to spend approximately  six-ten hours per week on class assignments. The course is self-paced; the outlined weekly schedule is purely suggestive - but recommended. Each week consists of a learning set; within the learning set are multiple modules that support course learning outcomes. It is recommended that students complete one learning set per week. All modules use Jupyter Notebooks for instruction. At the end of each module there will be an assignment.
+As a self-guided course there is no grading; however, it is strongly recommended that students complete each assignment. The assignments build on each other and allow the learner to solve various programming questions and/or write computer programs that apply skills learned. Each assignment will be listed in the corresponding Jupyter Notebooks module and will have a solution so students can check their work. Upon completion of the assessment for a given module, students can progress to the next module. There is nothing to turn in. Should students have feedback they can reach out to those listed under contacts.
+Given the self-paced nature of this course students are encouraged to become avid googlers. Stack Overflow is a great source to find answers to questions. Students are expected to struggle through each assignment and learn how to find answers on their own. Should material prove too difficult please see the contact list
+In addition to each week's learning set there will be additional material available for students who wish for more examples or practice, and information regarding how material can be applied in new ways. These additional materials are not included in the expected six to ten hours of work per week, but are great resources for those who wish to challenge themselves more and have a deeper understanding and greater mastery of the material at hand. Additional resources will include youtube links, chapters from the supplementary text, and articles on programming.
+
+Contacts
+	For additional help or feedback on code, students can reach out to the following people:
+Primary: Brendon Stanley; brendon.stanley@rams.colostate.edu; 970-290-6149
+Secondary: Jerry.Duggan@colostate.edu
+
+Prerequisites
+ECE 102 is recommended - not required.
+CS 152 is recommended - not required.
+STAT 314 is recommended - not required.
+
+Materials
+Required Text: None
+Supplementary Text: Python Crash Course: A Hands-On, Project-Based Introduction to Programming by Eric Matthes (1st edition). Matthes 2nd edition will also work, but chapters may differ. This is a great textbook at an affordable price that has additional examples/practice.
+Technology: A laptop or computer is needed with an internet connection. Windows or Mac machines are both fine. This course will use Python 3.8 and Pycharm as the integrated development environment (IDE). See Week 0 for how to install Python 3.8 and PyCharm for Mac and Windows Machines.
+
+
+
+Course Learning Outcomes (CLO)
+Upon completion of this course students will be able to ...
+Demonstrate control and data structures necessary for operations on given data sets.
+Execute python programs structured in a manner that allows for code reusability, scalability, maintality, and readability.
+Apply python programming techniques to solve engineering problems relating to operations on data sets.
+Understand object oriented programming in relation to Python.
+Describe basic networking principles and security vulnerabilities.
+Understand basic network security and vulnerabilities that can exist in a system.
+Understand relational databases and basic commands for SQLite.
+Operate a backend API that can ingest data using the Django REST-API framework.
+Implement testing procedures to verify the functionality of the program.
+
+Topic Outline:
+Week 0: Installing Python and Pycharm
+Topics: Install Python 3.8 and PyCharm onto your computer
+Materials: Learning Set Zero from Jupyter Notebook
+Additional Resources:
+Python Crash Course: Chapter 1 and Appendix A, B
+Corey Schafer: Episode 1
+
+Part 1 Weeks 1-4: CLOs 1, 2, 3, 4 and 5
+Week 1: Into to Python - Control and Data Structures (CLO 1) - Learning Set 1
+Module 1 - Hello World
+Unit objectives: Students will be able to print simple statements to the terminal and understand that python is an interpreted language.
+	Content:
+Print statements to the terminal
+Compiled vs interpreted comparison (C vs python)
+Module 2 - Variables Basics
+Unit objectives: Define primitive variables of different types and overwrite said variables.
+		Content:
+Creation of different variable types
+Overwriting variables
+Printing variables
+Module 3 - Variables Basics Pt 2
+Unit objectives: Perform mathematical operations on primitive variable types. Find cases where the program will crash and understand the traceback that python will print to the terminal to debug.
+		  Content:
+Add subtract, multiply, and divide numbers
+Float division and integer division
+fstring to print to terminal
+Rounding
+Modulus (find the remainder)
+Exponents
+Exceptions (divide by zero error)
+Adding wrong types (string + int)
+Trackback and exception print out to terminal
+Module 4 - Boolean Logic
+Unit objectives: Perform evaluations to determine if expressions are true or false. Students will understand the basics of booleans logic.
+Content:
+True and False in Python (“Truth-y-ness”)
+How to evaluate a function
+Use mathematical expressions to determine properties
+Introduce “and”, “or”, “not”
+Module 5 - If Statements
+Unit objectives: Apply use of “if” statements to programs such that evaluations can dictate operation.
+Content:
+What is an if statement
+Relation to boolean logic
+Checking conditions
+Using else
+Using ifelse
+Example of how to not use if statements
+Module 7 - Data Structures
+Unit objectives: Demonstrate the ability to define different types of variables and variables that contain other variables of different types.
+Content:
+Lists
+Dictionaries
+List of dictionaries
+Nested dictionaries
+Operations on dictionaries
+Operations on lists
+Module 8 - For Loops
+Unit objectives: Use for loops to operate over data that are iterable. Demonstrate what happens when non iterable variables are operated on by a for loop.
+Content:
+Defining a for loop
+Tuples - introduce with dict operations
+Iterate over lists and dictionaries using for loops
+Range - enumerate
+How to not use range
+Break
+
+Topics: Variables, Evaluation, If statements, Loops. Follow directions
+within each module.
+Materials: Learning Set One from Jupyter Notebook, modules 1-9
+Evaluate: Demonstrate adeptness with control and data structures to perform operations on data needed to write basic programs. Each module ends with a self evaluation task with given program parameters (i.e. your program must be able to do X, Y, and Z and return an answer. Solutions will be provided for you to check your work).
+Additional Resources:
+Python Crash Course: Chapter 2, 3, 4, 5, 6, 7
+Corey Schafer: Episode 2, 3, 4, 5, 6, 7
+
+Module 9 - While Loops
+Unit objectives: Use while loops to operate over data while conditions are true. Exit the while loop or break from the while loop when starting conditions are false or are no longer relevant.
+Content:
+Defining a while loop
+Starting conditions for while loops
+Exit conditions for while loops
+
+Week 2: Python Basics - Python as a high level language (CLO 2) - Learning Set 2
+Module 1 - Different Language Types
+Unit objectives: Students will explain the basics of different programming languages, the advantages/disadvantages of python, as well as some industry examples of where python is used.
+Content:
+High level vs low level programming
+Variables are points to things
+Advantages/ disadvantages of Python
+Industry applications of Python
+Module 2 - Functions Basics
+Unit objectives: Use functions to organize programs into discrete module blocks of code that are reusable and callable.
+Content:
+What is a function
+When to use functions
+How to pass parameters into a function
+Tuples
+Mutable vs immutable variables
+Function returning tuples
+Module 3 - Function Main
+Unit objectives: Apply the __main__ function to now start all programs. Gain a better knowledge of program structuring.
+Content:
+How to start a program using __main__
+Pass config arguments from __main__
+Module 4 - Functions Advanced
+Unit objectives: Demonstrate the ability to make function calls within a function and to pass in arguments of variable size into a function.
+Content:
+Function calls inside a function
+How to pass another function as an input
+Default arguments
+*args
+**kwargs
+Module 5 - Imports
+Unit objectives: Show adeptness at importing modules within python. Including the standard python libraries, students created code, and imported packages that were installed.
+Content:
+Python standard imports
+Code reuse through imports
+Into to the terminal
+What is pip
+Using pip to install packages
+Module 6 - Time
+Unit objectives: Use various timekeeping tools (time since epoch and datetime objects) to record timestamps. Manipulate these timestamps into different forms for readability and operation.
+Content:
+Time since epoch
+Datetime objects
+Handling Time zones
+UTC time
+Time conversations
+Operations on time
+Module 7 - Exceptions
+Unit objectives: Show how exceptions can be used to harden code and allow for failures to be accounted for cleanly.
+Content:
+Hardening code
+Dealing with fail cases
+Context managers
+Handling exceptions
+Module 8 - Logging
+Unit objectives: Demonstrate the ability to log information at various logging levels to a log file for review.
+Content:
+What are log files
+Logging levels
+How to log files in a python program
+Log configurations
+
+Topics: Different types of programming languages, functions, importing, time, logging.
+Materials: Learning Set Two from Jupyter Notebook, modules 1-8
+Evaluate: Demonstrate the ability to write basic programs that can operate on variables and timestamps given design parameters using functions to create scalability and readability in code. Each module (in addition to module one) will end with an assignment for students to complete and solutions to check their work.
+Additional Resources:
+Python Crash Course: Chapter 8
+Corey Schafer: Episode 8, 9, 14, 16, 24
+Week 3: Operations on Data - Control and Data Structures (CLO 3) - Learning Set 3
+Module 1 - Mapping
+Unit objectives:
+Content:
+Use of mapping
+When applicable to map to a function
+Module 2 - Lambda
+Unit objectives:
+Content:
+What is a lambda in Python
+When to use a lambda
+Module 3 - Filters
+Unit objectives:
+Content:
+How to use a Filter
+Filters in relation to lambdas
+Module 4 - Input/Output
+Unit objectives:
+Content:
+What are CSV files
+How to read, write, and append a CSV file
+Module 5 - Input/Output Pt 2
+Unit objectives:
+Content:
+JSON files
+Python dictionaries and JSON
+Reading configuration settings from JSON
+Module 6 - Data Handling (Intro to Data Bases)
+Unit objectives:
+Content:
+Use list of dicts (or nested dicts) as a table
+Field selection
+Record selection
+Data conversion
+Join
+Topics:
+Materials:
+Evaluate:
+Additional Resources:
+Week 4: OOP and Threads - Classes, Objects, and Threading within Python (CLO 4) - Learning Set 4
+Module 1 - Objects and Classes
+Unit objectives:
+Content:
+What is an object in programming
+Data structure vs object
+Module 2 - Classes
+Unit objectives:
+Content:
+What is a class in Python
+Why do we use classes
+Initialize an instance of a class
+Class variables
+Class Methods
+Module 3 - Class Inheritance
+Unit objectives:
+Content:
+Use cases for inheritance
+Advantages
+Abstract Base Class
+Module 4 - Threading Basics
+Unit objectives:
+Content:
+What is a thread
+Threading vs multiprocessing in Python and their uses
+Module 5 - Threading, functions, and classes
+Unit objectives:
+Content:
+How to create multiple threads of the same function
+Creating threads of instances of classes
+Module 6 - Programming Hierarchy
+Unit objectives:
+Content:
+How to handle programs of larger size
+Reading configuration settings from JSON
+Topics:
+Materials:
+Evaluate:
+Additional Resources:
+Corey Schafer: Episodes 1, 2, 3, 4
+
+Part 2 weeks 5-6: CLOs 5, 6, 7 8, 9 and 10
+Week 5: Networking - Overview of OSI Model and Security (CLO 5&6) - Learning Set 5&6
+Module 1 - Intro to Networks
+Unit objectives:
+Content:
+What is a network
+How can data move in a network
+Network Layers (VERY basic overview of OSI model - don’t even call it OSI)
+Module 2 - Old network example
+Unit objectives:
+Content:
+How does a network look when only a few machines are connected (1970’s)
+Discussion on physical layer and data link
+Module 3 - Medium sized network
+Unit objectives:
+Content:
+How can we connect small networks together
+A company of three divisions example
+Discussion on Network layer
+Module 4 - Application
+Unit objectives:
+Content:
+HTTP
+DNS
+Module 5 - Vulnerabilities
+Unit objectives:
+Content:
+Eavesdropping
+Message Integrity
+Impersonation
+Hijacking
+Denial of Service
+Traffic Analysis
+Module 6 - AAA
+Content:
+Authentication
+Authorization
+Auditing
+Module 9 - Cryptography Basics
+Content:
+Encryption for sensitive information
+RSA key pairs
+Storing passwords
+Topics:
+Materials:
+Evaluate:
+Additional Resources:
+Week6: Django - Introduction to Backend APIs and python requests (CLO 8) - Learning Set 8
+Module 1 - Intro to APIs
+Unit objectives: Demonstrate an understanding for what APIs are, when they can be used, and why they are important.
+Content:
+Kitchen API example
+Use cases
+Real life examples
+Module 2 - Django
+Unit objectives: Show why Django is a good tool for back-end API development and how it can mitigate security issues.
+Content:
+Why Django
+Tools Django has
+Install of Django
+Module 3 - SQLite
+Unit objectives: Understand why databases are needed for large applications. Demonstrate how tables are created in SQLite, rows are added to tables, and queries can search through tables.
+Content:
+What is SQLite
+Relation Tables
+SQL commands
+SQL in a python shell
+Long vs wide format
+Module 4 - Django Backend
+Unit objectives: Use the Django framework to create an endpoint for data ingestion while allowing ingested data to be saved to a SQlite database.
+Content:
+Create new model in database
+Django ORM
+Imperative vs Declarative
+Create endpoint for data ingestion
+Include non 200 response codes
+Module 5 - Postman
+Unit objectives: Use Postman to push data via HTTP to the Django API backend. Students should see how Postman can be used to test APIs.
+Content:
+What is Postman
+Use Postman to test API
+Module 6 - Injection Validation
+Unit objectives: Demonstrate the ability to varily Postman pushes are accepted by the API and saved into the SQLite database.
+Content:
+See data stored in Django’s SQLite database
+Return data stored in database in JSON format to web-browser or Postman
+Module 7 - Python requests
+Unit objectives: Use the Python requests package to push data to the API endpoint.
+Content:
+How to send HTTP posts using requests in Python
+Formatting of data in requests
+Topics: Django back-end API, Postman, Python API calls using requests
+Materials:  Learning Set Eight & Ninefrom Jupyter Notebook, modules 1-5
+Evaluate: Demonstrate proficiency Django and REST-API calls from python using the requests library. Each module ends with a self evaluation task with given program parameters (i.e. your program must be able to do X, Y, and Z and return an answer. Solutions will be provided for you to check your work).
+Additional Resources:
+Python Crash Course: Chapter 18
+Corey Schafer: Episode 1-17
+Week 8: Testing - Introduction to Backend APIs and python requests (CLO 8&9) - Learning Set 8&9
+Module 1 - Testing Pt 1
+Unit objectives: Demonstrate an understanding for why code needs to be tested. Apply engineering project management skills to describe the functionality of a program.
+Content:
+Why do we test code
+How test cases scale with larger software projects
+Define objectives for a program
+Module 2 - Testing Pt 2
+Unit objectives: Understand the difference between unit and integration testing and write a suite of tests to validate a program.
+Content:
+Testing types
+Testing all fail cases
+Pytest
+Assert statements
+Write Pytest to validate that a program meets design requirements
+Module 4 - Generators
+Unit objectives: Apply python programming abilities to design generators that will automatically create data and push it to the Django API in a loop.
+Content:
+Random number generators
+Sleep timers
+Module 5 - Django Testing
+Unit objectives: Implement knowledge on testing to design a Pytest suite to validate the functionality of the Django API. Use generators to test continuous injection of data to the API.
+Content:
+Applied unit testing
+Applied generators
+Topics:
+Materials:
+Evaluate:
+Additional Resources:
+
