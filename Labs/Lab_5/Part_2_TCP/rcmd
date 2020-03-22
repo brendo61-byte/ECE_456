@@ -1,0 +1,18 @@
+#!/bin/bash
+set -e
+
+#echo $#
+
+delta=$(expr $# - 5)
+#echo $delta
+
+command=${@: $#-delta}
+
+
+#echo $1
+#echo $2
+#echo $3
+#echo $4
+#echo $command
+
+python client_TCP.py $1 $2 $3 $4 $command

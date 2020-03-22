@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84665b00-3be5-4c2f-aa28-9d98c1201fe8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lab_1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab_4/.idea/Lab_4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab_4/client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab_4/m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab_4/server.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab_4/test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_2/.idea/Lab_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_5/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_5/.idea/Lab_5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_5/Part_1_UDP/client_UDP.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_5/Part_1_UDP/server_UDP.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_5/Part_2_TCP/client_TCP.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_5/Part_2_TCP/rcmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_5/Part_2_TCP/rcmdd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_5/Part_2_TCP/server_TCP.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab_5/README.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +38,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -157,6 +160,9 @@
       <workItem from="1582740974020" duration="1852000" />
       <workItem from="1583082410711" duration="597000" />
       <workItem from="1583091063799" duration="3413000" />
+      <workItem from="1584811237075" duration="576000" />
+      <workItem from="1584815883904" duration="3410000" />
+      <workItem from="1584909514117" duration="275000" />
     </task>
     <servers />
   </component>
