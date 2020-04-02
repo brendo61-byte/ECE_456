@@ -1,4 +1,3 @@
 #!/bin/bash
-set -e
 
 python server_UDP.py $1

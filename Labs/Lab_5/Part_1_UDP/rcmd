@@ -1,18 +1,17 @@
 #!/bin/bash
-set -e
 
-#echo $#
+echo $#
 
 delta=$(expr $# - 5)
-#echo $delta
+echo $delta
 
 command=${@: $#-delta}
 
 
-#echo $1
-#echo $2
-#echo $3
-#echo $4
-#echo $command
+echo $1
+echo $2
+echo $3
+echo $4
+echo $command
 
 python client_UDP.py $1 $2 $3 $4 $command

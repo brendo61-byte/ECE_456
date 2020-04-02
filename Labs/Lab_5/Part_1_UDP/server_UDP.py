@@ -39,9 +39,11 @@ def listen(serverPort, IP):
 
             while not done:
                 if first:
-                    print("\nNew connection from: {}:{}".format(addr[0], addr[1]))
+                    print("\nNew connection")
+                    print("Source IP: {}:{}".format(addr[0], addr[1]))
                     connectionStartTime = datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
-                    print("Connection Start Time: " + connectionStartTime)
+                    print("Current time: " + connectionStartTime)
+                    print("Status=connected")
 
                     headerRaw = data[0:32]
                     payloadRaw = data[32:]
@@ -76,7 +78,11 @@ def listen(serverPort, IP):
                     done = True
 
             print("\nConnection to client ended ...")
-            print("Waiting for next client")
+            print("Source IP: {}:{}".format(addr[0], addr[1]))
+            connectionStartTime = datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
+            print("Current time: " + connectionStartTime)
+            print("Status=closed")
+            print("Waiting for next client ...")
 
 
 def formatReturnPayload(returnPayload):
@@ -150,15 +156,18 @@ def preRunArgs(unpackedPayload):
     unformatedCommand = unpackedPayload.get("command")
     commandArgs = formatCommand(unformatedCommand=unformatedCommand)
 
-    print(f"Final command: {commandArgs}")
+    print(f"Command: {commandArgs}")
 
     executionCount = int(unpackedPayload.get("executionCount"))
     delay = float(unpackedPayload.get("timeDelay"))
 
     print("\nExecuting Command ...")
-    for i in range(executionCount):
-        runCommand(commandArgs=commandArgs, i=i, executionCount=executionCount)
-        time.sleep(delay)
+    try:
+        for i in range(executionCount):
+            runCommand(commandArgs=commandArgs, i=i, executionCount=executionCount)
+            time.sleep(delay)
+    except Exception as e:
+        print(f"Exception raised while trying to run command\nException: {e}")
 
     print("Command Execution Complete")
 
@@ -264,15 +273,15 @@ def unpackPayload(payload, headers):
 
 if __name__ == '__main__':
     os.system("clear")
-    print("TCP Server Running ...")
+    print("UDP Server Running ...")
     try:
         port = int(sys.argv[1])
+        print(f"Using port {port}")
+        run(port=port)
     except Exception as e:
         print("Could not take command line arg for port")
         print("Exception: {}\nTraceBack".format(e, traceback.format_exc()))
         print("\nProgram now exiting")
         exit()
 
-    print(f"Using port {port}")
 
-    run(port=port)

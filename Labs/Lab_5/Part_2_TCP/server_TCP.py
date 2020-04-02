@@ -38,9 +38,12 @@ def listen(serverPort, IP):
             payload = b''
 
             with conn:
-                print("\nNew connection from: {}:{}".format(addr[0], addr[1]))
-                connectionStartTime = datetime.datetime.now().strftime("%mClient/%d/%Y, %H:%M:%S")
-                print(connectionStartTime)
+                if first:
+                    print("\nNew connection")
+                    print("Source IP: {}:{}".format(addr[0], addr[1]))
+                    connectionStartTime = datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
+                    print("Current time: " + connectionStartTime)
+                    print("Status=connected")
 
                 data = conn.recv(1024)
                 count += 1
@@ -70,13 +73,18 @@ def listen(serverPort, IP):
 
                     print("Return Payload sent")
 
+
             print("\nConnection to client ended ...")
-            print("Waiting for next client")
+            print("Source IP: {}:{}".format(addr[0], addr[1]))
+            connectionStartTime = datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
+            print("Current time: " + connectionStartTime)
+            print("Status=closed")
+            print("Waiting for next client ...")
 
 
 def getReturnPayload(connectionStartTime):
     # gets txt file into and creates length header
-    outputTextRaw = f"\nConnection Start Time: {connectionStartTime}" + readArgOutput()
+    outputTextRaw = "\nConnection Start Time: {} {}".format(connectionStartTime,  readArgOutput())
 
     payload = outputTextRaw.encode("utf-8")
 

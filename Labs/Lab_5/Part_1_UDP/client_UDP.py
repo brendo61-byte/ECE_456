@@ -8,6 +8,8 @@ TIME_OUT = 10
 PACK_VAL = 'Q'
 MAX_PACK_SIZE = 2 ** 64 - 1
 SEND_SIZE = 1024
+ERROR_LEN = 44
+PROB_VAL = 1952671086
 
 """
 Client for Lab 5 using TCP connection. Inputs are command line args. Defaulted to working on a local machine via port 7500 if no
@@ -83,16 +85,24 @@ def call(serverIP, port, executionCount, timeDelay, command):
             while True:
                 data, addr = sock.recvfrom(SEND_SIZE)
 
+                if first:
+                    if len(data) == ERROR_LEN:
+                        print("Error on the server side")
+                        break
+
                 header = data[0:8]
                 payload = data[8:]
                 num, total = unpackHeader(header=header)
+
+                if total == 1952671086:
+                    unpackPayload(payload=data)
+                    break
 
                 if first:
                     print("Server is replying")
                     print("Expecting {} packets from server".format(total))
                     receivedPayload = makeDict(val=total, receivedPayload=receivedPayload)
                     first = False
-                    print(receivedPayload.keys())
 
                 print(f"Packet {num} of {total} has arrived")
 
@@ -195,7 +205,7 @@ def getHeader(payloadRaw):
     for key, val in payloadRaw.items():
         if len(val) > MAX_PACK_SIZE:
             print(f"{key} is too big. Max length is {MAX_PACK_SIZE}")
-            print(programExit())
+            programExit()
 
     header = b''
 
@@ -291,7 +301,7 @@ def getCommands():
 
 if __name__ == '__main__':
     os.system("clear")
-    print("TCP Client Started...\n")
+    print("UDP Client Started...\n")
 
     try:
         inputArgs = {
@@ -301,10 +311,11 @@ if __name__ == '__main__':
             "timeDelay": float(sys.argv[4]),
             "command": getCommands()
         }
+
+        run(**inputArgs)
+
     except Exception as e:
         print("Could not take command line args")
         print("Exception: {}\nTraceBack".format(e, tb.format_exc()))
         print("\nProgram now exiting")
         exit()
-
-    run(**inputArgs)
