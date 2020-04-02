@@ -14,4 +14,4 @@ echo $3
 echo $4
 echo $command
 
-python client_TCP.py $1 $2 $3 $4 $command
+python3 client_TCP.py $1 $2 $3 $4 $command
